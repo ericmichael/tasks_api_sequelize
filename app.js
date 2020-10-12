@@ -6,7 +6,7 @@ const Sequelize = require('sequelize');
 // instantiate the library for use, connecting to the sqlite database file
 let sequelize = new Sequelize({
     dialect: 'sqlite',
-    storage: 'todos.sqlite'
+    storage: 'tasks.sqlite'
 })
 
 // If port is set in environment variable use that port
@@ -22,50 +22,50 @@ app.use(express.urlencoded({ extended: false }));
 
 // Start: Change only below this line
 
-// uncomment this when you have created the todo model
-// const Todo = sequelize.import("./models/todos.js");
+// uncomment this when you have created the task model
+// const Task = sequelize.import("./models/tasks.js");
 
-// View all todos
-// Happy Path: returns all todos in an array in JSON format (Status 200)
+// View all tasks
+// Happy Path: returns all tasks in an array in JSON format (Status 200)
 // Sad Path: None
-app.get("/todos", function(req, res){
+app.get("/tasks", function(req, res){
    
 });
 
-// View single todo
-// Happy Path: returns the requested todo item in JSON format (Status 200)
-// Sad Path: the requested todo item does not exist (Status 404)
-app.get("/todos/:id", function(req, res){
+// View single task
+// Happy Path: returns the requested task item in JSON format (Status 200)
+// Sad Path: the requested task item does not exist (Status 404)
+app.get("/tasks/:id", function(req, res){
    
 });
 
-// Create a todo
-// Happy Path: creates the todo item (Status 201)
+// Create a task
+// Happy Path: creates the task item (Status 201)
 // Sad Path: none
-app.post("/todos", function(req, res){
+app.post("/tasks", function(req, res){
 
 });
 
-// Update specific todo
-// Happy Path: updates the requested todo item (Status 204)
-// Sad Path: the requested todo item does not exist (Status 404)
-app.patch("/todos/:id", function(req, res){
+// Update specific task
+// Happy Path: updates the requested task item (Status 204)
+// Sad Path: the requested task item does not exist (Status 404)
+app.patch("/tasks/:id", function(req, res){
     
 });
 
-// Delete a todo
-// Happy Path: deletes the requested todo item (Status 204)
-// Sad Path: the requested todo item does not exist (Status 404)
-app.delete("/todos/:id", function(req, res){
+// Delete a task
+// Happy Path: deletes the requested task item (Status 204)
+// Sad Path: the requested task item does not exist (Status 404)
+app.delete("/tasks/:id", function(req, res){
     
 });
 
-// Add you own ability to mark a todo as complete
-// Happy Path: marks the todo item as complete (Status 204)
+// Add you own ability to mark a task as complete
+// Happy Path: marks the task item as complete (Status 204)
 // Sad Path: None
 
-// Add you own ability to mark a todo as incomplete
-// Happy Path: marks the todo item as incomplete (Status 204)
+// Add you own ability to mark a task as incomplete
+// Happy Path: marks the task item as incomplete (Status 204)
 // Sad Path: None
 
 // STOP: Don't change anything below this line
