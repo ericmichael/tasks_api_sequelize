@@ -60,6 +60,14 @@ app.delete("/todos/:id", function(req, res){
     
 });
 
+// Add you own ability to mark a todo as complete
+// Happy Path: ???
+// Sad Path: ???
+
+// Add you own ability to mark a todo as incomplete
+// Happy Path: ???
+// Sad Path: ???
+
 // STOP: Don't change anything below this line
 
 app.listen(PORT, function () {
