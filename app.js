@@ -61,12 +61,12 @@ app.delete("/todos/:id", function(req, res){
 });
 
 // Add you own ability to mark a todo as complete
-// Happy Path: ???
-// Sad Path: ???
+// Happy Path: marks the todo item as complete (Status 204)
+// Sad Path: None
 
 // Add you own ability to mark a todo as incomplete
-// Happy Path: ???
-// Sad Path: ???
+// Happy Path: marks the todo item as incomplete (Status 204)
+// Sad Path: None
 
 // STOP: Don't change anything below this line
 
