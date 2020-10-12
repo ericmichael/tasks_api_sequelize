@@ -1,7 +1,7 @@
 let express = require('express')
 let cors = require('cors')
 let app = express()
-let Sequelize = require('sequelize');
+const Sequelize = require('sequelize');
 
 // instantiate the library for use, connecting to the sqlite database file
 let sequelize = new Sequelize({
@@ -26,33 +26,38 @@ app.use(express.urlencoded({ extended: false }));
 // const Todo = sequelize.import("./models/todos.js");
 
 // View all todos
-// Happy Path: returns all todos in an array in JSON format
+// Happy Path: returns all todos in an array in JSON format (Status 200)
 // Sad Path: None
-app.get("/todos", function(){
-
+app.get("/todos", function(req, res){
+   
 });
 
 // View single todo
-// Happy Path: returns the requested todo item in JSON format
-// Sad Path: the requested todo item does not exist
-// Sad Path: refused to save
-app.get("/todos/:id", function(){
+// Happy Path: returns the requested todo item in JSON format (Status 200)
+// Sad Path: the requested todo item does not exist (Status 404)
+app.get("/todos/:id", function(req, res){
+   
+});
+
+// Create a todo
+// Happy Path: creates the todo item (Status 201)
+// Sad Path: none
+app.post("/todos", function(req, res){
 
 });
 
 // Update specific todo
-// Happy Path: updates the requested todo item
-// Sad Path: the requested todo item does not exist
-// Sad Path: refused to save
-app.patch("/todos/:id", function(){
-
+// Happy Path: updates the requested todo item (Status 204)
+// Sad Path: the requested todo item does not exist (Status 404)
+app.patch("/todos/:id", function(req, res){
+    
 });
 
 // Delete a todo
-// Happy Path: deletes the requested todo item
-// Sad Path: the requested todo item does not exist
-app.delete("/todos/:id", function(){
-
+// Happy Path: deletes the requested todo item (Status 204)
+// Sad Path: the requested todo item does not exist (Status 404)
+app.delete("/todos/:id", function(req, res){
+    
 });
 
 // STOP: Don't change anything below this line
